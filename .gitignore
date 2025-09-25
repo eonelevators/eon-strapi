@@ -1,7 +1,6 @@
 ############################
 # OS X
 ############################
-
 .DS_Store
 .AppleDouble
 .LSOverride
@@ -65,7 +64,7 @@ $RECYCLE.BIN/
 # Logs and databases
 ############################
 
-.tmp
+.tmp/
 *.log
 *.sql
 *.sqlite
@@ -115,7 +114,7 @@ yarn-error.log
 # Tests
 ############################
 
-coverage
+#coverage
 
 ############################
 # Strapi
@@ -127,5 +126,7 @@ exports
 .strapi
 dist
 build
-.strapi-updater.json
 .strapi-cloud.json
+config/server.js
+.tmp/data.db
+.strapi-updater.json
