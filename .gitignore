@@ -127,6 +127,6 @@ exports
 dist
 build
 .strapi-cloud.json
-config/server.js
+config/server.ts
 .tmp/data.db
 .strapi-updater.json
