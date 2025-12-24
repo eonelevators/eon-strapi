@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "elevator_steps",
+  "info": {
+    "singularName": "elevator-step",
+    "pluralName": "elevator-steps",
+    "displayName": "Elevator Step"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "QuestionTitle": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "QuestionTitle"
+    },
+    "step_order": {
+      "type": "integer"
+    },
+    "depends_on": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "elevator_options": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::elevator-option.elevator-option",
+      "mappedBy": "elevator_step"
+    }
+  }
+}

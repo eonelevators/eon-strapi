@@ -373,6 +373,111 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiElevatorOptionElevatorOption
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'elevator_options';
+  info: {
+    displayName: 'Elevator Option';
+    pluralName: 'elevator-options';
+    singularName: 'elevator-option';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    elevator_step: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::elevator-step.elevator-step'
+    >;
+    label: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::elevator-option.elevator-option'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    show_if: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    value: Schema.Attribute.String;
+  };
+}
+
+export interface ApiElevatorQuoteElevatorQuote
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'elevator_quotes';
+  info: {
+    displayName: 'Elevator Quote';
+    pluralName: 'elevator-quotes';
+    singularName: 'elevator-quote';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    answers: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.Email;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::elevator-quote.elevator-quote'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    phone: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    recommendation: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiElevatorStepElevatorStep
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'elevator_steps';
+  info: {
+    displayName: 'Elevator Step';
+    pluralName: 'elevator-steps';
+    singularName: 'elevator-step';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    depends_on: Schema.Attribute.String;
+    description: Schema.Attribute.Blocks;
+    elevator_options: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::elevator-option.elevator-option'
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::elevator-step.elevator-step'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    QuestionTitle: Schema.Attribute.String;
+    slug: Schema.Attribute.UID<'QuestionTitle'>;
+    step_order: Schema.Attribute.Integer;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -882,6 +987,9 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::elevator-option.elevator-option': ApiElevatorOptionElevatorOption;
+      'api::elevator-quote.elevator-quote': ApiElevatorQuoteElevatorQuote;
+      'api::elevator-step.elevator-step': ApiElevatorStepElevatorStep;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
