@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_sections_heroes",
+  "collectionName": "components_section_banners",
   "info": {
-    "displayName": "hero",
+    "displayName": "banner",
     "icon": "star"
   },
   "options": {},
@@ -12,8 +12,14 @@
     "subheading": {
       "type": "string"
     },
-    "hero_description": {
+    "banner_description": {
       "type": "text"
+    },
+    "cta_text": {
+      "type": "string"
+    },
+    "cta_link": {
+      "type": "string"
     },
     "image": {
       "type": "media",
@@ -24,12 +30,6 @@
         "videos",
         "audios"
       ]
-    },
-    "cta_text": {
-      "type": "string"
-    },
-    "cta_link": {
-      "type": "string"
     }
   },
   "config": {}

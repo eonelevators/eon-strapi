@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "product_pages",
+  "collectionName": "products",
   "info": {
-    "singularName": "product-page",
-    "pluralName": "product-pages",
-    "displayName": "Products "
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product"
   },
   "options": {
     "draftAndPublish": true
@@ -20,7 +20,7 @@
     "sections": {
       "type": "dynamiczone",
       "components": [
-        "sections.hero"
+        "section.banner"
       ]
     }
   }
