@@ -403,6 +403,48 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiVillaLiftEnquiryVillaLiftEnquiry
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'villa_lift_enquiries';
+  info: {
+    displayName: 'villa-lift-enquiry';
+    pluralName: 'villa-lift-enquiries';
+    singularName: 'villa-lift-enquiry';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    comments: Schema.Attribute.Text;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    desktop_mobile_villalift_form: Schema.Attribute.String;
+    elevator_for: Schema.Attribute.String;
+    email: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::villa-lift-enquiry.villa-lift-enquiry'
+    > &
+      Schema.Attribute.Private;
+    mobile: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+    page_name: Schema.Attribute.String;
+    page_url: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    villalift_number_of_floors: Schema.Attribute.String;
+    villalift_number_of_openings: Schema.Attribute.String;
+    villalift_number_of_passengers: Schema.Attribute.String;
+    villalift_operating_speed_values: Schema.Attribute.String;
+    villalift_recommendations: Schema.Attribute.JSON;
+    villalift_shape_of_shaft: Schema.Attribute.String;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -913,6 +955,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::product.product': ApiProductProduct;
+      'api::villa-lift-enquiry.villa-lift-enquiry': ApiVillaLiftEnquiryVillaLiftEnquiry;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

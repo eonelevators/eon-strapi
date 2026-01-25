@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "villa_lift_enquiries",
+  "info": {
+    "singularName": "villa-lift-enquiry",
+    "pluralName": "villa-lift-enquiries",
+    "displayName": "villa-lift-enquiry"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "villalift_number_of_floors": {
+      "type": "string"
+    },
+    "villalift_number_of_passengers": {
+      "type": "string"
+    },
+    "villalift_number_of_openings": {
+      "type": "string"
+    },
+    "villalift_operating_speed_values": {
+      "type": "string"
+    },
+    "villalift_shape_of_shaft": {
+      "type": "string"
+    },
+    "villalift_recommendations": {
+      "type": "json"
+    },
+    "desktop_mobile_villalift_form": {
+      "type": "string"
+    },
+    "page_url": {
+      "type": "string"
+    },
+    "page_name": {
+      "type": "string"
+    },
+    "elevator_for": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "mobile": {
+      "type": "string"
+    },
+    "comments": {
+      "type": "text"
+    }
+  }
+}
