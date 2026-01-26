@@ -373,6 +373,90 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiApartmentLiftEnquiryApartmentLiftEnquiry
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'apartment_lift_enquiries';
+  info: {
+    displayName: 'apartment-lift-enquiry';
+    pluralName: 'apartment-lift-enquiries';
+    singularName: 'apartment-lift-enquiry';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    apartmentlift_number_of_floors: Schema.Attribute.String;
+    apartmentlift_number_of_openings: Schema.Attribute.String;
+    apartmentlift_number_of_passengers: Schema.Attribute.String;
+    apartmentlift_operating_speed_values: Schema.Attribute.String;
+    apartmentlift_recommendations: Schema.Attribute.JSON;
+    apartmentlift_shape_of_shaft: Schema.Attribute.String;
+    comments: Schema.Attribute.Text;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    desktop_mobile_apartmentlift_form: Schema.Attribute.String;
+    elevator_for: Schema.Attribute.String;
+    email: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::apartment-lift-enquiry.apartment-lift-enquiry'
+    > &
+      Schema.Attribute.Private;
+    mobile: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+    page_name: Schema.Attribute.String;
+    page_url: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiOfficeLiftEnquiryOfficeLiftEnquiry
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'office_lift_enquiries';
+  info: {
+    displayName: 'office-lift-enquiry';
+    pluralName: 'office-lift-enquiries';
+    singularName: 'office-lift-enquiry';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    comments: Schema.Attribute.Text;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    desktop_mobile_officelift_form: Schema.Attribute.String;
+    elevator_for: Schema.Attribute.String;
+    email: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::office-lift-enquiry.office-lift-enquiry'
+    > &
+      Schema.Attribute.Private;
+    mobile: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+    officelift_number_of_floors: Schema.Attribute.String;
+    officelift_number_of_openings: Schema.Attribute.String;
+    officelift_number_of_passengers: Schema.Attribute.String;
+    officelift_operating_speed_values: Schema.Attribute.String;
+    officelift_recommendations: Schema.Attribute.JSON;
+    officelift_shape_of_shaft: Schema.Attribute.String;
+    page_name: Schema.Attribute.String;
+    page_url: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiProductProduct extends Struct.CollectionTypeSchema {
   collectionName: 'products';
   info: {
@@ -954,6 +1038,8 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::apartment-lift-enquiry.apartment-lift-enquiry': ApiApartmentLiftEnquiryApartmentLiftEnquiry;
+      'api::office-lift-enquiry.office-lift-enquiry': ApiOfficeLiftEnquiryOfficeLiftEnquiry;
       'api::product.product': ApiProductProduct;
       'api::villa-lift-enquiry.villa-lift-enquiry': ApiVillaLiftEnquiryVillaLiftEnquiry;
       'plugin::content-releases.release': PluginContentReleasesRelease;

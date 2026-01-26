@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "apartment_lift_enquiries",
+  "info": {
+    "singularName": "apartment-lift-enquiry",
+    "pluralName": "apartment-lift-enquiries",
+    "displayName": "apartment-lift-enquiry"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "apartmentlift_number_of_floors": {
+      "type": "string"
+    },
+    "apartmentlift_number_of_passengers": {
+      "type": "string"
+    },
+    "apartmentlift_number_of_openings": {
+      "type": "string"
+    },
+    "apartmentlift_operating_speed_values": {
+      "type": "string"
+    },
+    "apartmentlift_shape_of_shaft": {
+      "type": "string"
+    },
+    "apartmentlift_recommendations": {
+      "type": "json"
+    },
+    "desktop_mobile_apartmentlift_form": {
+      "type": "string"
+    },
+    "page_url": {
+      "type": "string"
+    },
+    "page_name": {
+      "type": "string"
+    },
+    "elevator_for": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "mobile": {
+      "type": "string"
+    },
+    "comments": {
+      "type": "text"
+    }
+  }
+}

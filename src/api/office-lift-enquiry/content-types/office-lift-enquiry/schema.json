@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "office_lift_enquiries",
+  "info": {
+    "singularName": "office-lift-enquiry",
+    "pluralName": "office-lift-enquiries",
+    "displayName": "office-lift-enquiry"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "officelift_number_of_floors": {
+      "type": "string"
+    },
+    "officelift_number_of_passengers": {
+      "type": "string"
+    },
+    "officelift_number_of_openings": {
+      "type": "string"
+    },
+    "officelift_operating_speed_values": {
+      "type": "string"
+    },
+    "officelift_shape_of_shaft": {
+      "type": "string"
+    },
+    "officelift_recommendations": {
+      "type": "json"
+    },
+    "desktop_mobile_officelift_form": {
+      "type": "string"
+    },
+    "page_url": {
+      "type": "string"
+    },
+    "page_name": {
+      "type": "string"
+    },
+    "elevator_for": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "mobile": {
+      "type": "string"
+    },
+    "comments": {
+      "type": "text"
+    }
+  }
+}
