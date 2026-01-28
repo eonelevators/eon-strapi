@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_section_key_features",
+  "info": {
+    "displayName": "Key Features"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "bg_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "feature": {
+      "type": "component",
+      "component": "section.feature-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_section_information",
+  "info": {
+    "displayName": "Information",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "icon_info_list": {
+      "type": "component",
+      "component": "section.list",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

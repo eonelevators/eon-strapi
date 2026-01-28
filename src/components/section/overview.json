@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_section_overviews",
+  "info": {
+    "displayName": "overview"
+  },
+  "options": {},
+  "attributes": {
+    "heading1": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "heading2": {
+      "type": "string"
+    },
+    "challenges": {
+      "type": "component",
+      "component": "section.cards",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

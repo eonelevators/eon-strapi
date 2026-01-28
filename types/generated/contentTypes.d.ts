@@ -478,7 +478,17 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    sections: Schema.Attribute.DynamicZone<['section.banner']>;
+    sections: Schema.Attribute.DynamicZone<
+      [
+        'section.banner',
+        'section.overview',
+        'section.information',
+        'section.feature-card',
+        'section.key-features',
+        'section.smart-feature',
+        'section.product-assessment',
+      ]
+    >;
     slug: Schema.Attribute.UID;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;

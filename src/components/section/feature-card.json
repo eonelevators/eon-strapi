@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_section_feature_cards",
+  "info": {
+    "displayName": "feature card"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "icon": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

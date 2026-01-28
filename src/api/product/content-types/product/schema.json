@@ -20,7 +20,13 @@
     "sections": {
       "type": "dynamiczone",
       "components": [
-        "section.banner"
+        "section.banner",
+        "section.overview",
+        "section.information",
+        "section.feature-card",
+        "section.key-features",
+        "section.smart-feature",
+        "section.product-assessment"
       ]
     }
   }

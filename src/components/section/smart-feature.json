@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_section_smart_features",
+  "info": {
+    "displayName": "smart feature",
+    "icon": "eye"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "feature": {
+      "type": "component",
+      "component": "section.feature-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
