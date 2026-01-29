@@ -415,6 +415,48 @@ export interface ApiApartmentLiftEnquiryApartmentLiftEnquiry
   };
 }
 
+export interface ApiHospitalLiftEnquiryHospitalLiftEnquiry
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'hospital_lift_enquiries';
+  info: {
+    displayName: 'hospital-lift-enquiry';
+    pluralName: 'hospital-lift-enquiries';
+    singularName: 'hospital-lift-enquiry';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    comments: Schema.Attribute.Text;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    desktop_mobile_hospitallift_form: Schema.Attribute.String;
+    elevator_for: Schema.Attribute.String;
+    email: Schema.Attribute.String;
+    hospitallift_number_of_floors: Schema.Attribute.String;
+    hospitallift_number_of_openings: Schema.Attribute.String;
+    hospitallift_number_of_passengers: Schema.Attribute.String;
+    hospitallift_operating_speed_values: Schema.Attribute.String;
+    hospitallift_recommendations: Schema.Attribute.JSON;
+    hospitallift_shape_of_shaft: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::hospital-lift-enquiry.hospital-lift-enquiry'
+    > &
+      Schema.Attribute.Private;
+    mobile: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+    page_name: Schema.Attribute.String;
+    page_url: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiOfficeLiftEnquiryOfficeLiftEnquiry
   extends Struct.CollectionTypeSchema {
   collectionName: 'office_lift_enquiries';
@@ -1049,6 +1091,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::apartment-lift-enquiry.apartment-lift-enquiry': ApiApartmentLiftEnquiryApartmentLiftEnquiry;
+      'api::hospital-lift-enquiry.hospital-lift-enquiry': ApiHospitalLiftEnquiryHospitalLiftEnquiry;
       'api::office-lift-enquiry.office-lift-enquiry': ApiOfficeLiftEnquiryOfficeLiftEnquiry;
       'api::product.product': ApiProductProduct;
       'api::villa-lift-enquiry.villa-lift-enquiry': ApiVillaLiftEnquiryVillaLiftEnquiry;

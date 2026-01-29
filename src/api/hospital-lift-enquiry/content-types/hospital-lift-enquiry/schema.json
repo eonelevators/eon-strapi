@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hospital_lift_enquiries",
+  "info": {
+    "singularName": "hospital-lift-enquiry",
+    "pluralName": "hospital-lift-enquiries",
+    "displayName": "hospital-lift-enquiry"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hospitallift_number_of_floors": {
+      "type": "string"
+    },
+    "hospitallift_number_of_passengers": {
+      "type": "string"
+    },
+    "hospitallift_number_of_openings": {
+      "type": "string"
+    },
+    "hospitallift_operating_speed_values": {
+      "type": "string"
+    },
+    "hospitallift_shape_of_shaft": {
+      "type": "string"
+    },
+    "hospitallift_recommendations": {
+      "type": "json"
+    },
+    "desktop_mobile_hospitallift_form": {
+      "type": "string"
+    },
+    "page_url": {
+      "type": "string"
+    },
+    "page_name": {
+      "type": "string"
+    },
+    "elevator_for": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "mobile": {
+      "type": "string"
+    },
+    "comments": {
+      "type": "text"
+    }
+  }
+}
